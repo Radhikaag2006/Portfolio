@@ -59,12 +59,7 @@ git push -u origin main
 ## Notes / Troubleshooting
 
 - If Vercel needs a specific Node version, either add an `engines` field to package.json or set the Node version in Vercel project settings.
-- No environment variables required for the public portfolio by default.
-
-## Recent changes
-
-- Removed the footer line that said "built with React, no CSS framework".
-- Made the hero contact buttons (Email / GitHub / LinkedIn) more prominent with larger sizing, stronger hover and subtle shadow for better discoverability.
+- No environment variables are required for the public portfolio by default.
 
 ## Editing content
 
@@ -73,5 +68,3 @@ git push -u origin main
 - Experience: `src/components/Experience.jsx` (`COMMITS` array)
 - Skills / achievements: `src/components/Skills.jsx`
 - Contact links and footer: `src/components/Contact.jsx`
-
-If you'd like, I can initialize git here and create the first commit for you (I won't be able to push to GitHub), or provide the exact gh CLI commands to create the repo and push from your machine.

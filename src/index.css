@@ -1,0 +1,99 @@
+:root {
+  --navy: #0B1E33;
+  --panel: #102A45;
+  --panel-hover: #14345470;
+  --grid-line: #1E3A5C;
+  --paper: #EAF1F7;
+  --slate: #7C93AA;
+  --cyan: #5EEAD4;
+  --amber: #FFB86B;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-sans: 'Inter', -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--navy);
+  color: var(--paper);
+  font-family: var(--font-sans);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-attachment: fixed;
+  background-position: center -1px;
+}
+
+a { color: inherit; }
+
+::selection {
+  background: var(--cyan);
+  color: var(--navy);
+}
+
+.wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* utility label style, used for eyebrows / tags */
+.label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.section {
+  padding: 88px 0;
+  border-top: 1px solid var(--grid-line);
+}
+
+.section:first-of-type {
+  border-top: none;
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.section-head .idx {
+  font-family: var(--font-mono);
+  color: var(--slate);
+  font-size: 14px;
+}
+
+.section-head h2 {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.section-head .rule {
+  flex: 1;
+  height: 1px;
+  background: var(--grid-line);
+}
+
+@media (max-width: 640px) {
+  .section { padding: 56px 0; }
+  .wrap { padding: 0 18px; }
+}
